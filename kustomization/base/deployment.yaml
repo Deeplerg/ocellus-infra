@@ -25,6 +25,6 @@ spec:
             memory: 192Mi
           requests:
             cpu: 0m # schedule first, think later!
-            memory: 128Mi
+            memory: 64Mi
       imagePullSecrets:
       - name: docker-registry-cred-ocellus-prod
