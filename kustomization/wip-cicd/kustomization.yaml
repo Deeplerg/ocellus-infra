@@ -10,8 +10,8 @@ nameSuffix: -wip-cicd
 
 images:
 - name: ocellus-image-name
-  newName: ocellus-image-name # still need to change this with "kustomize edit set image"
-  newTag: latest # this too
+  newName: 10.96.55.55:5000/ocellus
+  newTag: wip-cicd-090da8a2
 
 configMapGenerator:
 - behavior: create
