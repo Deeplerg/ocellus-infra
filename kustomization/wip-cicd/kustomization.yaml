@@ -10,8 +10,8 @@ nameSuffix: -wip-cicd
 
 images:
 - name: ocellus-image-name
-  newName: 10.96.55.55:5000/ocellus
-  newTag: wip-cicd-8e82474b
+  newName: registry.deeplerg.dev/ocellus
+  newTag: wip-cicd-79f5038a
 
 configMapGenerator:
 - behavior: create
