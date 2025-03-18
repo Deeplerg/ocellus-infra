@@ -10,7 +10,7 @@ namespace: ocellus-wip-cicd
 images:
 - name: ocellus-image-name
   newName: registry.deeplerg.dev/ocellus
-  newTag: wip-cicd-79f5038a
+  newTag: wip-cicd-e8846d51
 
 configMapGenerator:
 - behavior: create
