@@ -6,7 +6,6 @@ resources:
 - ../base
 
 namespace: ocellus-wip-cicd
-nameSuffix: -wip-cicd
 
 images:
 - name: ocellus-image-name
@@ -46,29 +45,29 @@ replacements:
     select:
       kind: Deployment
 - source:
-    fieldPath: data.INGRESS_CLASS_NAME
+    fieldPath: data.GATEWAY_NAME
     kind: ConfigMap
     name: environment-variables
   targets:
   - fieldPaths:
-    - spec.ingressClassName
+    - spec.parentRefs.0.name
     select:
-      kind: Ingress
+      kind: HTTPRoute
 - source:
-    fieldPath: data.INGRESS_TLS_HOST
+    fieldPath: data.GATEWAY_NAMESPACE
     kind: ConfigMap
     name: environment-variables
   targets:
   - fieldPaths:
-    - spec.tls.0.hosts.0
+    - spec.parentRefs.0.namespace
     select:
-      kind: Ingress
+      kind: HTTPRoute
 - source:
-    fieldPath: data.INGRESS_HOST
+    fieldPath: data.GATEWAY_HOST
     kind: ConfigMap
     name: environment-variables
   targets:
   - fieldPaths:
-    - spec.rules.0.host
+    - spec.hostnames.0
     select:
-      kind: Ingress
+      kind: HTTPRoute
