@@ -9,8 +9,8 @@ namespace: ocellus-prod
 
 images:
 - name: ocellus-image-name
-  newName: 10.96.55.55:5000/ocellus
-  newTag: prod-8e82474b
+  newName: registry.deeplerg.dev/ocellus
+  newTag: prod-6b8ca399
 
 configMapGenerator:
 - behavior: create
